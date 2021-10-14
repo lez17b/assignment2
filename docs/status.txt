@@ -1,0 +1,7 @@
+[master e73982a] Repository owner information added to README.md
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+➜  assignment2 SE git:(master) git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
