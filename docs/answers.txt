@@ -1,0 +1,137 @@
+FIRST PART
+
+Tutorials date: 14-10-21
+Github account creation: 3 years ago
+
+https://github.com/lez17b/assignment2
+
+
+SECOND PART
+1.
+➜  assignment2 SE git:(master) ✗ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docs/status.txt
+
+➜  assignment2 SE git:(master) ✗ git commit -m 'docuemnts directory added'
+[master 7b0eac6] docuemnts directory added
+ 1 file changed, 7 insertions(+)
+ create mode 100644 docs/status.txt
+
+2.
+➜  assignment2 SE git:(master) ✗ git rev-list --count master
+10
+➜  assignment2 SE git:(master) ✗ git shortlog | grep -E '^[ ]+\w+' | wc -l
+6
+
+3.
+➜  assignment2 SE git:(master) ✗ git log README.md
+commit e73982a4ff3d514f0fcaa28b025a3dfe86b50710
+Author: Luciano Zavala <luczze@gmail.com>
+Date:   Thu Oct 14 14:53:54 2021 -0500
+
+    Repository owner information added to README.md
+
+commit b97bf1fc8cc7c840fa38f2aad5641a5aa17d50e1
+Author: Luciano Zavala <luczze@gmail.com>
+Date:   Thu Oct 14 14:51:49 2021 -0500
+
+    Repository owner information added to README.md
+
+commit f4975e5d56ff331762b318bfd12c5236e0299f25
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 25 18:33:08 2019 -0400
+
+    -> Adding an empty README.md file
+
+4.
+- First I would say branches are important in the sense of collaboration, making it available for developers to work on
+features at the sametime without the need of updating the main repository for them to work.
+
+- Second, I think the fact that software is a volatile industry we need to make sure production code is always safe.
+Therefore, branching is a great tool so everytime its necessary to build a new feature there is space to test and make
+sure the code works.
+
+5.
+git log: As the name suggests, this command shows commit logs. It is a command which allows you to view information
+about the previous commit. Unlike git status command, it only inspects the history of committed repository.
+
+6.
+➜  assignment2 SE git:(master) ✗ git log --all vehicle.h
+
+commit 03106e92a1e36708334c69dd071088c6d0937b1d
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 11 16:58:59 2019 -0400
+
+    -> Declared the trivial destructors for all classes
+    -> Fully formatted toString methods for all classes
+    -> Added test cases in the main method for testing the implementations
+    -> Added validation on value for engine sizes in the  Car class
+
+commit f9cd890b3f89fbe5920a1fdf7da34ee915ba27b9
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 18:42:39 2019 -0400
+
+    -> Partial implementation of PoweredVehicle and Car
+    -> Definition of virtual functions
+
+commit f9c24b027e6275ff6a1911241014c44971b4e8d0
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 18:04:36 2019 -0400
+
+    Refactored Vehicle class to separate definition and declarations
+    Added mileageEstimate abstract method to Vehicle
+    Implemented the Bicycle class
+
+commit 4f6c88c953f4601929df7980a19dcdaee4f13854
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 14:59:19 2019 -0400
+
+    Base Vehicle class created
+
+7.
+➜  assignment2 SE git:(master) ✗ git log --all --grep='file'
+
+commit f4975e5d56ff331762b318bfd12c5236e0299f25
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 25 18:33:08 2019 -0400
+
+    -> Adding an empty README.md file
+
+8.
+- Inheritance is a concept based on the idea of utilization of components from classes in order to optimize devops.
+The concept lies on the idea that a parent class contains many important characteristics that can be inherited to some
+child classes. For example these a parent class called shape and there are many child classes named square, etc.
+The parent class contains certain information about the shape and inherits them to each child class, nevertheless each
+child class also has its own methods and variables.
+
+- Polymorphism is the method in an object-oriented programming language that performs different things as per the
+object's class, which calls it. With Polymorphism, a message is sent to multiple class objects, and every object
+responds appropriately according to the properties of the class.
+
+- In object-oriented computer programming languages, the concept of encapsulation refers to the bundling of data, along
+with the methods that operate on that data, into a single unit. Many programming languages use encapsulation frequently
+in the form of classes.
+
+9.
+- Dictator and Lieutenants Workflow it’s generally used by huge projects with hundreds of
+collaborators; one famous example is the Linux kernel. Various integration managers are in charge of certain parts of
+the repository; they’re called lieutenants. All the lieutenants have one integration manager known as the benevolent
+dictator. The benevolent dictator pushes from their directory to a reference repository from which all the
+collaborators need to pull.
+- In regard to Integration-Manager Workflow, because Git allows you to have multiple remote repositories, it’s possible
+to have a workflow where each developer
+has written access to their own public repository and read access to everyone else’s. This scenario often includes a
+canonical repository that represents the “official” project. To contribute to that project, you create your own public
+clone of the project and push your changes to it. Then, you can send a request to the maintainer of the main project
+to pull in your changes. The maintainer can then add your repository as a remote, test your changes locally, merge
+them into their branch, and push back to their repository.
+
+10.
+- In the previous question I mentioned a project that portraits very well the concept of Dictator and Lieutenants
+Workflow. The Unix Kernel is a project that has a hundred of contributors around the globe. This type of workflow is
+designed to work with many developers.
